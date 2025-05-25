@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
@@ -9,6 +11,8 @@ export default function Home() {
       <Button className="rounded-full" variant="primary" size="icon">
         <ArrowUpRight/>
       </Button>
+      <Input type="email" placeholder="Email"/>
+      <Textarea placeholder="Message"/>
     </div>
   );
 }
