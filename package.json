@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "echo \"No tests specified\" && exit 0",
-    "prepare": "test $NODE_ENV = production || husky"
+    "prepare": "npx husky install",
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.7",

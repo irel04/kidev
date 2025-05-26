@@ -6,7 +6,6 @@ import { Switch } from "@/components/ui/switch"
 import { Moon, Sun } from "lucide-react"
 import { useContext } from "react"
 
-
 export default function DarkModeToggle() {
 
 	const {theme: mode, setTheme} = useContext(ThemeContext)
