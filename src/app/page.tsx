@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
+import HomeSection from "@/components/home/HomeSection";
+
 
 
 export default function Home() {
@@ -7,14 +7,7 @@ export default function Home() {
 
 
   return (
-    <>
-      <section>
-        <h1 className="text-brand-500">Hello pipol</h1>
-        <Button className="rounded-full" variant="link" >
-          <ArrowUpRight />
-          IREL
-        </Button>
-      </section>
-    </>
+    <HomeSection />
+
   );
 }

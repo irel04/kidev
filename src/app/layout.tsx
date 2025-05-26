@@ -36,15 +36,16 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <div className="relative max-w-[2560px] mx-auto
-          p-8 md:pt-24 lg:pt-32 2xl:pt-64 md:px-24 lg:px-32 2xl:px-64 h-dvh overflow-y-auto">
-            <Navigation />
+          <div className="flex flex-col relative max-w-[2560px] mx-auto h-dvh overflow-y-auto ">
 
             {/* Wrapper for contents */}
             {children}
 
             <Stepper />
             <DarkModeToggle />
+
+            <Navigation />
+
 
           </div>
 
