@@ -1,8 +1,10 @@
 'use client'
 
+import { ThemeContext } from "@/components/ThemeProvider"
 import { BrainCog, FolderCode, Home, Phone, User } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useContext } from "react"
 
 const sections = [
 	{ label: "Home", link: "/", icon: Home },
@@ -13,15 +15,17 @@ const sections = [
 ]
 
 const Navigation = () => {
+	const { theme } = useContext(ThemeContext)
 
-	
+	 const logoSrc = theme === 'light' ? '/logo-light.png' : '/logo.png';
+
 
 	return (
 		<nav className="absolute bottom-0 md:relative flex max-w-[2560px] mx-auto w-full px-6 py-4 lg:py-8 lg:px-10 shadow-lg justify-between items-center z-10">
 			<div className="hidden md:block relative w-20 h-8">
 				<Link href="/">
 					<Image
-						src="/logo.png"
+						src={logoSrc}
 						alt="kidev logo"
 						fill
 						sizes="(max-width: 40px) 100vw, (max-width: 60px) 50vw, 33vw"
