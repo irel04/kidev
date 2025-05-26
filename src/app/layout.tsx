@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import DarkModeToggle from "@/components/DarkModeToggle";
 import ThemeProvider from "@/components/ThemeProvider";
+import Stepper from "@/components/Stepper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,12 +36,19 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <Navigation />
-          <div className="max-w-[2560px]  mx-auto">
-            {children}
+          <div className="relative max-w-[2560px]  mx-auto flex 
+          p-8 md:pt-24 lg:pt-32 2xl:pt-44 md:px-24 lg:px-32 2xl:px-44 h-screen border-red-500 border-2 overflow-y-auto">
+            <Navigation />
+
+            {/* Wrapper for contents */}
+            <div className="flex-1 border-secondary-500 border-2 ">
+              {children}
+            </div>
+            <Stepper/>
+          <DarkModeToggle />
+
           </div>
 
-          <DarkModeToggle />
         </ThemeProvider>
         
       </body>
