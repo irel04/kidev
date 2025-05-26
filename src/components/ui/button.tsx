@@ -10,17 +10,17 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-brand-400 shadow-xs hover:bg-brand-600/90 focus-visible:ring-brand-800",
+          "bg-brand-400 text-white shadow-xs hover:bg-brand-600/90 focus-visible:ring-brand-800",
         destructive:
-          "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+          "bg-destructive-500 text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
-          "border shadow-xs border-brand-500 focus-visible:bg-brand-800 hover:bg-brand-500/50",
+          "border text-brand-500 shadow-xs border-brand-500 focus-visible:bg-brand-800 hover:bg-brand-500/50",
         secondary:
-          "bg-secondary-400 shadow-xs hover:bg-secondary-600/90 focus-visible:ring-secondary-800",
+          "bg-secondary-400 text-white shadow-xs hover:bg-secondary-600/90 focus-visible:ring-secondary-800",
         ghost:
-          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
-        link: "text-primary underline-offset-4 hover:underline",
-        neutral: "bg-neutral-400 shadow-xs hover:bg-neutral-600/90 focus-visible:ring-neutral-800",
+          "hover:bg-accent  hover:text-accent-foreground dark:hover:bg-accent/50",
+        link: "underline-offset-4 hover:underline",
+        neutral: "bg-neutral-400 text-white shadow-xs hover:bg-neutral-600/90 focus-visible:ring-neutral-800",
       },
       size: {
         primary: "h-9 px-4 py-2 has-[>svg]:px-3",
