@@ -21,7 +21,7 @@ const Navigation = () => {
 
 
 	return (
-		<nav className="absolute bottom-0 md:bottom-auto md:top-0 left-0 flex max-w-[2560px] mx-auto w-full px-6 py-4 lg:py-8 lg:px-10 2xl:py-12 2xl:px-14 shadow-lg justify-between items-center z-10 bg-background">
+		<nav className="fixed md:absolute bottom-0 md:bottom-auto md:top-0 left-0 flex max-w-[2560px] mx-auto w-full px-6 py-4 lg:py-8 lg:px-10 2xl:py-12 2xl:px-14 shadow-lg justify-between items-center z-10 bg-background">
 			<div className="hidden md:block relative w-20 h-8">
 				<Link href="/">
 					<Image

@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  
+
 
   return (
     <html lang="en" className="dark">
@@ -36,21 +36,20 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <div className="relative max-w-[2560px]  mx-auto flex 
-          p-8 md:pt-24 lg:pt-32 2xl:pt-44 md:px-24 lg:px-32 2xl:px-44 h-screen border-red-500 border-2 overflow-y-auto">
+          <div className="relative max-w-[2560px] mx-auto
+          p-8 md:pt-24 lg:pt-32 2xl:pt-64 md:px-24 lg:px-32 2xl:px-64 h-dvh overflow-y-auto">
             <Navigation />
 
             {/* Wrapper for contents */}
-            <div className="flex-1 border-secondary-500 border-2 ">
-              {children}
-            </div>
-            <Stepper/>
-          <DarkModeToggle />
+            {children}
+
+            <Stepper />
+            <DarkModeToggle />
 
           </div>
 
         </ThemeProvider>
-        
+
       </body>
     </html>
   );

@@ -8,11 +8,13 @@ export default function Home() {
 
   return (
     <>
-      <h1 className="text-brand-500">Hello pipol</h1>
-      <Button className="rounded-full" variant="link" >
-        <ArrowUpRight />
-        IREL
-      </Button>
+      <section>
+        <h1 className="text-brand-500">Hello pipol</h1>
+        <Button className="rounded-full" variant="link" >
+          <ArrowUpRight />
+          IREL
+        </Button>
+      </section>
     </>
   );
 }
