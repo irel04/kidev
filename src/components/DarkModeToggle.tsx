@@ -16,7 +16,7 @@ export default function DarkModeToggle() {
   };
 
 	return (
-		<div className="flex gap-2 absolute right-2 top-3 md:top-auto md:bottom-4 md:right-2 items-center z-10">
+		<div className="flex gap-2 fixed right-2 top-3 md:top-auto md:bottom-4 md:right-8 2xl:bottom-20 2xl:right-6 items-center z-10">
 			<Switch id="dark-mode" onClick={toggleTheme} checked={mode === "light"}/>
 			{mode === "dark" ? <Sun size={16} /> : <Moon size={16} />  }
 			<Label className="hidden md:block">{mode === "dark" ? "Light" : "Dark"} Mode</Label>
