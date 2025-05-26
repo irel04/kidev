@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function HomeSection() {
 	return (
-		<section className="flex flex-col justify-center items-center h-full w-full">
+		<section className="flex-1 flex flex-col justify-center items-center w-56 md:w-full mx-auto">
 			<div className="relative w-24 md:w-28 lg:w-40 2xl:w-64 aspect-square bg-brand-500 rounded-full">
 				<Image src="/my_avatar.svg" alt="Description" fill className="relative object-cover rounded-full" />
 			</div>
