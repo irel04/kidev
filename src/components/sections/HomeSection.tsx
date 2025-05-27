@@ -3,11 +3,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { forwardRef } from "react";
 
 
-export default function HomeSection() {
+const HomeSection = forwardRef<HTMLElement>((__,ref) => {
 	return (
-		<section id="home" className="h-full flex flex-col justify-center items-center  ">
+		<section data-section ref={ref} id="home" className="h-full flex flex-col justify-center items-center  ">
 			<div className="relative w-24 lg:w-28 aspect-square bg-brand-500 rounded-full">
 				<Image src="/my_avatar.svg" alt="Description" fill className="relative object-cover rounded-full" />
 			</div>	
@@ -22,4 +23,8 @@ export default function HomeSection() {
 			</div>
 		</section>
 	)
-}
+})
+
+HomeSection.displayName = "HomeSection"
+
+export default HomeSection;
