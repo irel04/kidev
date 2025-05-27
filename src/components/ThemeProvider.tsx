@@ -44,14 +44,24 @@ export default function ThemeProvider({ children }: ThemeProviderProps) {
 
 
   useEffect(() => {
+
+    const scrollContainer = document.querySelector('main') as HTMLElement; // or your scrollable element
+
+    if (!scrollContainer) return;
+
     const handleScroll = () => {
+
+    
+
       const sections = document.querySelectorAll('[data-section]') as NodeListOf<HTMLElement>;
 
       let currentSection: Navigations = 'Home';
+          console.log("hello")
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
         if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+
           switch (section.getAttribute('id')) {
             case 'home':
               currentSection = 'Home';
@@ -78,7 +88,7 @@ export default function ThemeProvider({ children }: ThemeProviderProps) {
     }
 
 
-    window.addEventListener('scroll', handleScroll);
+    scrollContainer.addEventListener('scroll', handleScroll);
 
     handleScroll();
 
