@@ -36,7 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <div className="flex flex-col relative max-w-[2560px] mx-auto h-dvh overflow-y-auto ">
+          <div className="flex flex-col relative max-w-[1440px] mx-auto h-dvh overflow-y-auto ">
 
             {/* Wrapper for contents */}
             {children}
