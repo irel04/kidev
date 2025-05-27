@@ -1,13 +1,13 @@
 'use client'
 
-import { ThemeContext } from "@/components/ThemeProvider"
+import { Navigations, ThemeContext } from "@/components/ThemeProvider"
 import { BrainCog, FolderCode, Home, Phone, User } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useContext } from "react"
 
-const sections = [
-	{ label: "Home", link: "/", icon: Home },
+export const sections = [
+	{ label: "Home", link: "#home", icon: Home },
 	{ label: "About Me", link: "#about-me", icon: User },
 	{ label: "Services", link: "#services", icon: BrainCog },
 	{ label: "Projects", link: "#projects", icon: FolderCode },
@@ -15,9 +15,10 @@ const sections = [
 ]
 
 const Navigation = () => {
-	const { theme } = useContext(ThemeContext)
+	const { theme, activeLink, setActiveLink } = useContext(ThemeContext)
 
 	 const logoSrc = theme === 'light' ? '/logo-light.png' : '/logo.png';
+
 
 
 	return (
@@ -35,9 +36,10 @@ const Navigation = () => {
 			</div>
 			<ul className="flex items-center gap-4 text-sm lg:text-base flex-1 justify-between md:flex-none">
 				{sections.map((section) => (
-					<li key={section.label}>
+					<li key={section.label} className={`${activeLink === section.label ? 'text-brand-500' : ''}`}>
 						<Link
 							href={section.link}
+							onClick={() => setActiveLink(section.label as Navigations)}
 						>
 							<p className="hidden md:block">{section.label}</p>
 							<section.icon className="md:hidden" />
