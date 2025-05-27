@@ -6,8 +6,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { useContext } from "react"
 
-const sections = [
-	{ label: "Home", link: "/", icon: Home },
+export const sections = [
+	{ label: "Home", link: "#home", icon: Home },
 	{ label: "About Me", link: "#about-me", icon: User },
 	{ label: "Services", link: "#services", icon: BrainCog },
 	{ label: "Projects", link: "#projects", icon: FolderCode },
