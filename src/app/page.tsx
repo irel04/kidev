@@ -9,7 +9,7 @@ export default function Home() {
 
 
   return (
-    <main className="h-screen flex-1 mt-10 md:mt-20 lg:mt-24  overflow-y-auto snap-y snap-mandatory scroll-smooth w-full scrollbar-hide ">
+    <main className="h-screen flex-1 mt-10 md:mt-20 lg:mt-24 overflow-y-auto snap-y snap-mandatory scroll-smooth w-full scrollbar-hide ">
       <HomeSection />
       <AboutMeSection />
     </main>
