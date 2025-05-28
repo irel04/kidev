@@ -22,7 +22,7 @@ const AboutMeSection = forwardRef<HTMLElement>((__, ref) => {
 
 
 	return (
-		<section ref={ref} id="about-me" className="h-full p-8 md:pl-12 lg:pl-20 relative flex flex-col gap-8 lg:gap-12  justify-center " data-section>
+		<section ref={ref} id="about-me" className="h-full p-8 md:pl-12 lg:pl-20 relative flex flex-col gap-8 lg:gap-12 " data-section>
 			{/* Heading */}
 			<div>
 				<p className="text-base lg:text-lg">About Me</p>
