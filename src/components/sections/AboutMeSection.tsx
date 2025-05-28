@@ -5,6 +5,22 @@ import { Download } from "lucide-react";
 import { forwardRef } from "react";
 
 const AboutMeSection = forwardRef<HTMLElement>((__, ref) => {
+
+	const handleDownload = () => {
+  // URL to your static file in the public folder
+  const fileUrl = '/RESUME-BACOLOD.pdf';
+
+  // Create a temporary link and trigger download
+  const link = document.createElement('a');
+  link.href = fileUrl;
+  link.setAttribute('download', 'RESUME-BACOLOD.pdf'); // filename for download
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+};
+
+
+
 	return (
 		<section ref={ref} id="about-me" className="h-full p-8 md:pl-12 lg:pl-20 relative flex flex-col gap-8 lg:gap-12  justify-center " data-section>
 			{/* Heading */}
@@ -20,7 +36,7 @@ const AboutMeSection = forwardRef<HTMLElement>((__, ref) => {
 				<p>Im familiar with Docker, Kubernetes, and Supabase, and I enjoy exploring tools across the full stack to continuously grow as a developer.</p>
 			</div>
 
-			<Button className="w-max">
+			<Button className="w-max" onClick={handleDownload}>
 				Download Resume
 				<Download size={16}/>
 			</Button>
