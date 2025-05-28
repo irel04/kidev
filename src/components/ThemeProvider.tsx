@@ -47,6 +47,8 @@ export default function ThemeProvider({ children }: ThemeProviderProps) {
 
     const scrollContainer = document.querySelector('main') as HTMLElement; // or your scrollable element
 
+    const navigationContainer = document.getElementById("navigation") as HTMLElement
+
     if (!scrollContainer) return;
 
     const handleScroll = () => {
@@ -56,15 +58,27 @@ export default function ThemeProvider({ children }: ThemeProviderProps) {
       const sections = document.querySelectorAll('[data-section]') as NodeListOf<HTMLElement>;
 
       let currentSection: Navigations = 'Home';
-          console.log("hello")
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
         if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
 
+          if (window.innerWidth >= 728 && window.innerWidth <= 2560) {
+            if (section.getAttribute("id") === "home") {
+
+              navigationContainer.style.display = "flex"
+
+
+            } else {
+              scrollContainer.style.margin = "0"
+              navigationContainer.style.display = "none"
+            }
+          }
+
           switch (section.getAttribute('id')) {
             case 'home':
               currentSection = 'Home';
+
               break;
             case 'about-me':
               currentSection = 'About Me';
