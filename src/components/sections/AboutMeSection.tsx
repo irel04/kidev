@@ -73,9 +73,12 @@ const AboutMeSection = forwardRef<HTMLElement>((__, ref) => {
 			<div className="flex-1 text-base max-w-72 mx-auto space-y-2 md:hidden flex flex-col justify-center gap-2">
 				<Carousel setApi={setApi} plugins={[
 					Autoplay({
-						delay: 5000
+						delay: 5000,
+						stopOnInteraction: false,
+						stopOnFocusIn: true,
+						stopOnMouseEnter: true
 					})
-				]}  className="bg-brand-500/50 text-white p-4 rounded-md dark:bg-secondary-900/50">
+				]}  className="bg-brand-500/50  p-8 rounded-md dark:bg-secondary-900/50 text-white">
 					<CarouselContent >
 						{aboutParagraphs.map((about, index) => (
 							<CarouselItem key={`about-${index}`}><p>{about}</p></CarouselItem>

@@ -1,8 +1,10 @@
 "use client"
 
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import PaginationDots from "@/components/PaginationDots"
+import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 import { LayoutDashboard, Route, ServerCog, Speech, TabletSmartphone, ToyBrick } from "lucide-react"
-import React, { forwardRef } from "react"
+import React, { forwardRef, useEffect, useState } from "react"
 
 type TSkillCard = {
 	icon: React.ElementType;
@@ -12,8 +14,8 @@ type TSkillCard = {
 
 const SkillsCard = ({ icon: Icon, title, description }: TSkillCard) => {
 	return (
-		<div className={`text-sm flex flex-col gap-4 p-10 bg-secondary-900/50 rounded-sm `}>
-			<Icon className="text-brand-500" size={36}/>
+		<div className={`text-sm flex aspect-square flex-col gap-4 p-10 bg-brand-500/50 dark:bg-secondary-900 rounded-sm text-white`}>
+			<Icon className="dark:text-brand-500 text-white" size={36}/>
 			<p className="font-bold">{title}</p>
 			<p>{description}</p>
 		</div>
@@ -56,6 +58,29 @@ const ServicesSection = forwardRef<HTMLElement>((__, ref) => {
 	]
 
 
+	const [api, setApi] = useState<CarouselApi>();
+
+	const [numberOfSlides, setNumberOfSlides] = useState<number>(1);
+
+	const [current, setCurrent] = useState<number>(0)
+
+
+	useEffect(() => {
+		if (!api) {
+			return
+		}
+
+		setNumberOfSlides(api.slideNodes().length);
+		setCurrent(api.selectedScrollSnap() + 1);
+
+		api.on("scroll", () => {
+			setCurrent(api.selectedScrollSnap() + 1)
+		})
+
+	}, [api])
+
+
+
 	return (
 		<section ref={ref} id="services" className="h-full p-8 md:pl-12 lg:pl-20 relative flex flex-col gap-8 lg:gap-12  " data-section>
 			{/* Heading */}
@@ -64,20 +89,25 @@ const ServicesSection = forwardRef<HTMLElement>((__, ref) => {
 				<p className="mt-2 text-xl md:text-2xl lg:text-3xl font-bold">In <span className="text-brand-500">Capabale of</span></p>
 			</div>
 			{/* Description */}
-			<div className="flex-1 flex justify-center md:hidden  items-center">
-				<Carousel className="w-full max-w-56">
-					<CarouselContent >
+			<div className="flex-1 flex flex-col justify-center md:hidden items-center gap-5">
+				<Carousel className="w-full max-w-72" setApi={setApi} plugins={[
+					Autoplay({
+						delay: 3000,
+						stopOnInteraction: false,
+						stopOnFocusIn: true,
+						stopOnMouseEnter: true
+					})
+				]}>
+					<CarouselContent>
 						{skillsData.map((skill, index) =>
-							<CarouselItem key={index} >
+							<CarouselItem key={index} className="basis/1/2" >
 								<SkillsCard icon={skill.icon} description={skill.description} title={skill.title} key={`carousel-${index}`}/>
 							</CarouselItem>
 						)}
 					</CarouselContent>
-					<CarouselPrevious />
-					<CarouselNext />
 				</Carousel>
 				
-				
+				<PaginationDots activePage={current} pageTotal={numberOfSlides}/>
 
 			</div>
 
