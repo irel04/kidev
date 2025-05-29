@@ -82,7 +82,7 @@ const ServicesSection = forwardRef<HTMLElement>((__, ref) => {
 
 
 	return (
-		<section ref={ref} id="services" className="h-full p-8 md:pl-12 lg:pl-20 relative flex flex-col gap-8 lg:gap-12  " data-section>
+		<section ref={ref} id="services" className="h-max p-8 md:pl-12 lg:pl-20 relative flex flex-col gap-8 lg:gap-12  " data-section>
 			{/* Heading */}
 			<div>
 				<p className="text-base lg:text-lg">Services</p>
