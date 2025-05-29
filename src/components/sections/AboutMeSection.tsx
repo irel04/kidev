@@ -78,7 +78,7 @@ const AboutMeSection = forwardRef<HTMLElement>((__, ref) => {
 						stopOnFocusIn: true,
 						stopOnMouseEnter: true
 					})
-				]}  className="bg-brand-500/50  p-8 rounded-md dark:bg-secondary-900/50 text-white">
+				]}  className="bg-brand-900 p-8 rounded-md dark:bg-secondary-900/50 text-white">
 					<CarouselContent >
 						{aboutParagraphs.map((about, index) => (
 							<CarouselItem key={`about-${index}`}><p>{about}</p></CarouselItem>

@@ -14,8 +14,8 @@ type TSkillCard = {
 
 const SkillsCard = ({ icon: Icon, title, description }: TSkillCard) => {
 	return (
-		<div className={`text-base flex aspect-square md:aspect-auto flex-col items-center md:items-start gap-4 p-6 md:p-8 bg-brand-500/50 dark:bg-secondary-900 rounded-sm text-white`}>
-			<Icon className="dark:text-brand-500 text-white" size={36}/>
+		<div className={`text-base flex aspect-square md:aspect-auto flex-col items-center md:items-start gap-4 p-6 md:p-8 bg-brand-900 dark:bg-secondary-900 rounded-sm text-white`}>
+			<Icon className="dark:text-brand-500 text-brand-200" size={36}/>
 			<p className="font-bold">{title}</p>
 			<p className="text-center md:text-start">{description}</p>
 		</div>
@@ -82,7 +82,7 @@ const ServicesSection = forwardRef<HTMLElement>((__, ref) => {
 
 
 	return (
-		<section ref={ref} id="services" className="h-max p-8 md:pl-12 lg:pl-20 relative flex flex-col gap-8 lg:gap-12  " data-section>
+		<section ref={ref} id="services" className="h-full md:h-max p-8 md:pl-12 lg:pl-20 relative flex flex-col gap-8 lg:gap-12  " data-section>
 			{/* Heading */}
 			<div>
 				<p className="text-base lg:text-lg">Services</p>
