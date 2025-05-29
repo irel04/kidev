@@ -88,10 +88,12 @@ const AboutMeSection = forwardRef<HTMLElement>((__, ref) => {
 				<PaginationDots pageTotal={numberOfSlides} activePage={current}/>
 			</div>
 
-			<Button className="w-max" onClick={handleDownload}>
-				Download Resume
-				<Download size={16}/>
-			</Button>
+			<div className="w-full flex justify-center md:justify-start">
+				<Button className="w-max" onClick={handleDownload}>
+					Download Resume
+					<Download size={16} />
+				</Button>
+			</div>
 		</section>
 	)
 })
