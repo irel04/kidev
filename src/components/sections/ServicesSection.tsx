@@ -14,10 +14,10 @@ type TSkillCard = {
 
 const SkillsCard = ({ icon: Icon, title, description }: TSkillCard) => {
 	return (
-		<div className={`text-sm flex aspect-square flex-col gap-4 p-10 bg-brand-500/50 dark:bg-secondary-900 rounded-sm text-white`}>
+		<div className={`text-base flex aspect-square md:aspect-auto flex-col items-center md:items-start gap-4 p-6 md:p-8 bg-brand-500/50 dark:bg-secondary-900 rounded-sm text-white`}>
 			<Icon className="dark:text-brand-500 text-white" size={36}/>
 			<p className="font-bold">{title}</p>
-			<p>{description}</p>
+			<p className="text-center md:text-start">{description}</p>
 		</div>
 	)
 }
@@ -89,7 +89,7 @@ const ServicesSection = forwardRef<HTMLElement>((__, ref) => {
 				<p className="mt-2 text-xl md:text-2xl lg:text-3xl font-bold">In <span className="text-brand-500">Capabale of</span></p>
 			</div>
 			{/* Description */}
-			<div className="flex-1 flex flex-col justify-center md:hidden items-center gap-5">
+			<div className="flex-1 flex flex-col justify-center md:hidden items-center gap-12">
 				<Carousel className="w-full max-w-72" setApi={setApi} plugins={[
 					Autoplay({
 						delay: 3000,
