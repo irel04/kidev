@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 let interval: ReturnType<typeof setInterval>;
 
@@ -8,8 +9,8 @@ let interval: ReturnType<typeof setInterval>;
 type Card = {
   id: number;
   name: string;
-  designation: string;
-  content: React.ReactNode;
+  description: string;
+  thumbnail: string;
 };
 
 export const CardStack = ({
@@ -56,15 +57,20 @@ export const CardStack = ({
               zIndex: cards.length - index, //  decrease z-index for the cards that are behind
             }}
           >
-            <div className="relative w-full h-32 flex items-center rounded-lg overflow-hidden">
-              {card.content}
-            </div>
+            {card.thumbnail && <div className="relative w-full h-32 flex items-center rounded-lg overflow-hidden">
+              <Image
+                src={card.thumbnail}
+                alt="web"
+                fill
+                className="object-cover"
+              />
+            </div>}
             <div>
               <p className="text-sm font-medium text-white md:text-base">
                 {card.name}
               </p>
               <p className="text-xs md:text-sm text-brand-300 font-normal">
-                {card.designation}
+                {card.description}
               </p>
             </div>
           </motion.div>

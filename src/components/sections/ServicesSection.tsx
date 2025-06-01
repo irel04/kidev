@@ -6,6 +6,8 @@ import Autoplay from "embla-carousel-autoplay"
 import { LayoutDashboard, Route, ServerCog, Speech, TabletSmartphone, ToyBrick } from "lucide-react"
 import React, { forwardRef, useEffect, useState } from "react"
 
+import { skills } from "@/data.json"
+
 type TSkillCard = {
 	icon: React.ElementType;
 	title: string,
@@ -24,38 +26,16 @@ const SkillsCard = ({ icon: Icon, title, description }: TSkillCard) => {
 
 const ServicesSection = forwardRef<HTMLElement>((__, ref) => {
 
-	const skillsData: TSkillCard[] = [
-		{
-			icon: ToyBrick,
-			title: "API Integration",
-			description: "Implemented API integrations on the front end using Axios, with efficient data fetching and caching handled by TanStack Query."
-		},
-		{
-			icon: LayoutDashboard,
-			title: "Front-end Development",
-			description: "Worked as a Front-End Developer for 2 years, leveraging various libraries and tools within the React ecosystem."
-		},
-		{
-			icon: ServerCog,
-			title: "Back-end Development",
-			description: "Developed and practiced RESTful APIs using Express, NestJS, and Spring Boot, with MySQL and PostgreSQL as database backends."
-		},
-		{
-			icon: Speech,
-			title: "Technical Leadership",
-			description: "Led and guided development teams to successful. Proficient in Agile and Scrum methodologies."
-		},
-		{
-			icon: TabletSmartphone,
-			title: "Mobile Development",
-			description: "Built mobile apps with React Native (Expo) and integrated Supabase as the backend service."
-		},
-		{
-			icon: Route,
-			title: "Google Maps  API",
-			description: "Proficient in using Google Maps API Products like Maps, Routes, and Places"
-		}
-	]
+	const definedIcons: Record<string, React.ElementType> = {
+		"toybrick": ToyBrick,
+		"layoutDashboard": LayoutDashboard,
+		"serverCog": ServerCog,
+		"speech": Speech,
+		"tabletSmartphone": TabletSmartphone,
+		"route": Route
+	}
+
+	
 
 
 	const [api, setApi] = useState<CarouselApi>();
@@ -99,9 +79,9 @@ const ServicesSection = forwardRef<HTMLElement>((__, ref) => {
 					})
 				]}>
 					<CarouselContent>
-						{skillsData.map((skill, index) =>
+						{skills.map((skill, index) =>
 							<CarouselItem key={index} className="basis/1/2" >
-								<SkillsCard icon={skill.icon} description={skill.description} title={skill.title} key={`carousel-${index}`}/>
+								<SkillsCard icon={definedIcons[skill.icon]} description={skill.description} title={skill.title} key={`carousel-${index}`}/>
 							</CarouselItem>
 						)}
 					</CarouselContent>
@@ -112,8 +92,8 @@ const ServicesSection = forwardRef<HTMLElement>((__, ref) => {
 			</div>
 
 			<div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 max-w-[600px] lg:max-w-[900px]">
-				{skillsData.map((skill, index) =>
-					<SkillsCard icon={skill.icon} description={skill.description} title={skill.title} key={`grid-icons-${index}`}/>
+				{skills.map((skill, index) =>
+					<SkillsCard icon={definedIcons[skill.icon]} description={skill.description} title={skill.title} key={`grid-icons-${index}`}/>
 				)}
 			</div>
 

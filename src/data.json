@@ -1,0 +1,90 @@
+{
+	"home": {
+		"greetings": "Hello, I am",
+		"name": "Irel Kian",
+		"description": "I am a full-stack developer based in the Philippines with expertise in building scalable, efficient, and user-friendly web and mobile applications.",
+		"linkedin": "https://www.linkedin.com/in/kianirel/"
+	},
+	"aboutMe": [
+		"I'm a passionate Software Developer with experience building scalable and maintainable web applications. My journey started in 2021 with Python, which laid a strong foundation in logic and problem-solving.",
+		"I specialize in React.js and Tailwind CSS, and I often use UI libraries like DaisyUI, Material UI, SHADCN, and Tailwind UI. My design-to-code process is supported by my Figma proficiency, using components, auto-layouts, and prototyping.",
+		"While front-end is my strength, I've also worked on backend projects using Express, NestJS, Slim PHP, and Spring Boot, along with databases like PostgreSQL, MySQL, MongoDB, and Firebase.",
+		"I'm familiar with Docker, Kubernetes, and Supabase, and I enjoy exploring tools across the full stack to continuously grow as a developer."
+	],
+	"skills": [
+		{
+			"icon": "toybrick",
+			"title": "API Integration",
+			"description": "Implemented API integrations on the front end using Axios, with efficient data fetching and caching handled by TanStack Query."
+		},
+		{
+			"icon": "layoutDashboard",
+			"title": "Front-end Development",
+			"description": "Worked as a Front-End Developer for 2 years, leveraging various libraries and tools within the React ecosystem."
+		},
+		{
+			"icon": "serverCog",
+			"title": "Back-end Development",
+			"description": "Developed and practiced RESTful APIs using Express, NestJS, and Spring Boot, with MySQL and PostgreSQL as database backends."
+		},
+		{
+			"icon": "speech",
+			"title": "Technical Leadership",
+			"description": "Led and guided development teams to successful. Proficient in Agile and Scrum methodologies."
+		},
+		{
+			"icon": "tabletSmartphone",
+			"title": "Mobile Development",
+			"description": "Built mobile apps with React Native (Expo) and integrated Supabase as the backend service."
+		},
+		{
+			"icon": "route",
+			"title": "Google Maps API",
+			"description": "Proficient in using Google Maps API Products like Maps, Routes, and Places"
+		}
+	],
+	"projects": [
+		{
+			"id": 0,
+			"name": "Buildhub PH | E-Commerce",
+			"description": "ReactJS, NodeJS, MYSQL",
+			"thumbnail": "/websites/buildhub.jpg",
+			"link": "https://buildhub.ph"
+		},
+		{
+			"id": 1,
+			"name": "Towfactory | Towing Service",
+			"description": "ReactJS, NodeJS, MYSQL, Google Maps API",
+			"thumbnail": "/websites/towfactory.jpg",
+			"link": "https://agent.towking.ph"
+		},
+		{
+			"id": 2,
+			"name": "Aircamp | Listing Platform",
+			"description": "ReactJS, TypeScipt, NodeJS, MYSQL, REST, Google MAPS API",
+			"thumbnail": "/websites/aircamp.jpg",
+			"link": "https://aircamp.ph"
+		},
+		{
+			"id": 3,
+			"name": "Innovex | Social Health Platform",
+			"description": "HTML, CSS, JS, NodeJS, MVC, MYSQL",
+			"thumbnail": "/websites/innovex.jpg",
+			"link": "https://health.innovex.org"
+		},
+		{
+			"id": 4,
+			"name": "Laro | Online Service",
+			"description": "ReactJS, NodeJS, MYSQL, Google Maps API",
+			"thumbnail": "/websites/laro.jpg",
+			"link": "https://laro.com.ph"
+		},
+		{
+			"id": 5,
+			"name": "SK Website | Online Service",
+			"description": "ReactJS, NodeJS, Supabase, MYSQL, SHADCN",
+			"thumbnail": "/websites/sk-online.jfif",
+			"link": "https://skbrgy177.com/"
+		}
+	]
+}
