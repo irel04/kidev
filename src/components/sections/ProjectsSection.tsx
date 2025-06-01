@@ -1,39 +1,72 @@
 'use client'
 
 import Filter from "@/components/Filter";
+import { Button } from "@/components/ui/button";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { CardStack } from "@/components/ui/card-stack";
 
 import data from "@/data.json";
+import { Drama } from "lucide-react";
 import { useState } from "react";
 
 
 const filterLabels = ["Front-end", "Back-end", "UI/UX", "Mobile", "Repositories"]
 
+type Project = {
+  id: number;
+  name: string;
+  description: string;
+  thumbnail: string;
+  link: string;
+  categories: string[];
+};
+
+const EmptyResult = () => {
+	return <div className="min-h-72 w-full  flex items-center justify-center flex-col ">
+		<Drama size={36} className="text-foreground"/>
+		<p className="text-lg font-medium mt-4">Empty</p>
+		<p className="text-sm mt-2">No result were found under this </p>
+	</div>
+}
+
+
 export default function ProjectsSection() {
 
 	const [active, setActive] = useState<string>("all")
 
+	const [renderedProjects, setRenderedProjects] = useState<Project[]>(data.projects)
+
 	const handleClickFilter = (value: string) => {
 		setActive(value)
+
+		if(value === "all"){
+			setRenderedProjects(data.projects)
+			return
+		}
+
+		const filteredProjects = data.projects.filter(item => item.categories.includes(value))
+
+		setRenderedProjects(filteredProjects)
 	}
 
 
 	return (
-		<section id="projects" className="h-full md:h-max p-8 md:pl-12 lg:pl-20 relative flex flex-col gap-8 lg:gap-12  " data-section>
+		<section id="projects" className="h-full  p-8 md:pl-12 lg:pl-20 relative flex flex-col gap-8 lg:gap-12  " data-section>
 			{/* Heading */}
 			<div>
 				<p className="text-base lg:text-lg">Projects</p>
-				<p className="mt-2 text-xl md:text-2xl lg:text-3xl font-bold"><span className="text-brand-500">Highlights</span> of My Work</p>
+				<p className="mt-2 text-xl md:text-2xl lg:text-3xl font-bold"><span className="text-brand-500">Works</span> I&apos;ve been Part of</p>
 			</div>
 			{/* Mobile Card Stack */}
 			<div className="flex-1 flex justify-center  items-center md:hidden">
-				<CardStack items={data.projects.slice(0,3)} offset={4} />
+				<CardStack items={renderedProjects.slice(0,3)} offset={4} />
 			</div>
 			{/* Web View */}
-			<div className="hidden md:flex flex-col max-w-[600px] lg:max-w-[900px] h-full gap-6 items-center">
+			<div className="hidden md:flex flex-col max-w-[600px] lg:max-w-[900px]  gap-6 items-center">
 				<Filter filterLabels={filterLabels} active={active} handleClick={handleClickFilter}/>
-				<HoverEffect items={data.projects}/>
+				
+				{renderedProjects.length === 0 ? <EmptyResult/> : <HoverEffect items={renderedProjects.slice(0, 6)}/>}
+				{renderedProjects.length > 6 && <Button variant="outline">View More</Button>}
 			</div>
 		</section>
 	)

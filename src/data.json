@@ -51,9 +51,7 @@
 			"thumbnail": "/websites/buildhub.webp",
 			"link": "https://buildhub.ph",
 			"categories": [
-				"Full-stack",
-				"Front-end",
-				"Back-end"
+				"front-end"
 			]
 		},
 		{
@@ -63,9 +61,7 @@
 			"thumbnail": "/websites/towfactory.webp",
 			"link": "https://agent.towfactory.com",
 			"categories": [
-				"Full-stack",
-				"Front-end",
-				"Back-end"
+				"front-end"
 			]
 		},
 		{
@@ -75,10 +71,8 @@
 			"thumbnail": "/websites/aircamp.webp",
 			"link": "https://aircamp.ph",
 			"categories": [
-				"Full-stack",
-				"Front-end",
-				"Back-end",
-				"UI/UX"
+				"front-end",
+				"ui/ux"
 			]
 		},
 		{
@@ -88,9 +82,9 @@
 			"thumbnail": "/websites/innovex.webp",
 			"link": "https://healthinnovex.org",
 			"categories": [
-				"Front-end",
-				"Back-end",
-				"UI/UX"
+				"front-end",
+				"back-end",
+				"ui/ux"
 			]
 		},
 		{
@@ -100,22 +94,31 @@
 			"thumbnail": "/websites/laro.webp",
 			"link": "https://laro.com.ph",
 			"categories": [
-				"Full-stack",
-				"Front-end",
-				"Back-end"
+				"front-end"
 			]
 		},
 		{
 			"id": 5,
 			"name": "SK Website | Online Service",
-			"description": "ReactJS, NodeJS, Supabase, MYSQL, SHADCN",
+			"description": "ReactJS, NodeJS, Supabase, PostgresSQL, SHADCN",
 			"thumbnail": "/websites/sk-online.webp",
 			"link": "https://skbrgy177.com/",
 			"categories": [
-				"Full-stack",
-				"Front-end",
-				"Back-end",
-				"UI/UX"
+				"front-end",
+				"back-end"
+			]
+		},
+		{
+			"id": 6,
+			"name": "JCiN | Research",
+			"description": "React Native, Supabase, PostgresSQL, ShadCN, EXPO",
+			"thumbnail": "/websites/jcin.webp",
+			"link": "https://jci-n-web.vercel.app/",
+			"categories": [
+				"back-end",
+				"front-end",
+				"ui/ux",
+				"mobile"
 			]
 		}
 	]
