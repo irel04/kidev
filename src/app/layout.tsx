@@ -6,6 +6,7 @@ import DarkModeToggle from "@/components/DarkModeToggle";
 import ThemeProvider from "@/components/ThemeProvider";
 import Stepper from "@/components/Stepper";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,7 +51,7 @@ export default function RootLayout({
           </div>
           <BackgroundBeams className="bg-backround"/>
 
-
+          <Toaster position="top-right"/>
         </ThemeProvider>
 
       </body>
