@@ -4,9 +4,10 @@ import Filter from "@/components/Filter";
 import { Button } from "@/components/ui/button";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { CardStack } from "@/components/ui/card-stack";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 import data from "@/data.json";
-import { Drama } from "lucide-react";
+import { ChevronsLeftRightEllipsis, Drama } from "lucide-react";
 import { useState } from "react";
 
 
@@ -70,10 +71,33 @@ export default function ProjectsSection() {
 				<p className="mt-2 text-xl md:text-2xl lg:text-3xl font-bold"><span className="text-brand-500">Works</span> I&apos;ve been Part of</p>
 			</div>
 			{/* Mobile Card Stack */}
-			<div className="flex-1 flex justify-evenly items-center md:hidden flex-col">
-				<CardStack items={renderedProjects.slice(0,4)} offset={4} />
-				{renderedProjects.length > 6 && <Button variant="outline">Show All</Button>}
-			</div>
+			<Dialog>
+				<div className="flex-1 flex justify-evenly items-center md:hidden flex-col">
+					<CardStack items={renderedProjects.slice(0, 4)} offset={4} />
+					{data.projects.length > 6 && <DialogTrigger asChild>
+						<Button variant="outline">See More</Button></DialogTrigger>}
+				</div>
+				<DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle className="text-brand-500">All Projects</DialogTitle>
+            <DialogDescription>
+              These are the projects I&apos;ve been part of and work with
+            </DialogDescription>
+          </DialogHeader>
+					<div className="overflow-x-auto">
+						<Filter filterLabels={filterLabels} active={active} handleClick={handleClickFilter} />
+					</div>
+					<div className="mt-4 flex flex-col gap-2">
+						{renderedProjects.length === 0 ? <EmptyResult key="empty-1"/> : renderedProjects.map((item, index) => (
+							<a className="text-sm flex gap-2 items-center underline decoration-brand-400 " href={item.link} target="_blank" rel="noopener noreferrer" key={`m${item.id}-${index}`} >
+								<ChevronsLeftRightEllipsis size={14} />
+								<p className="font-medium">{item.name}</p>
+							</a>
+						))}
+					</div>
+          
+        </DialogContent>
+			</Dialog>
 			{/* Web View */}
 			<div className="hidden md:flex flex-col max-w-[600px] lg:max-w-[900px]  gap-6 items-center">
 				<Filter filterLabels={filterLabels} active={active} handleClick={handleClickFilter}/>
