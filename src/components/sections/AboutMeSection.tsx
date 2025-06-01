@@ -7,15 +7,9 @@ import { Download } from "lucide-react";
 import { forwardRef, useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 
+import { aboutMe } from "@/data.json"
 
 
-
-const aboutParagraphs = [
-  "I'm a passionate Software Developer with experience building scalable and maintainable web applications. My journey started in 2021 with Python, which laid a strong foundation in logic and problem-solving.",
-  "I specialize in React.js and Tailwind CSS, and I often use UI libraries like DaisyUI, Material UI, SHADCN, and Tailwind UI. My design-to-code process is supported by my Figma proficiency, using components, auto-layouts, and prototyping.",
-  "While front-end is my strength, I've also worked on backend projects using Express, NestJS, Slim PHP, and Spring Boot, along with databases like PostgreSQL, MySQL, MongoDB, and Firebase.",
-  "I'm familiar with Docker, Kubernetes, and Supabase, and I enjoy exploring tools across the full stack to continuously grow as a developer."
-];
 
 
 const AboutMeSection = forwardRef<HTMLElement>((__, ref) => {
@@ -65,7 +59,7 @@ const AboutMeSection = forwardRef<HTMLElement>((__, ref) => {
 			{/* Description */}
 			{/* This only shows in larger screens */}
 			<div className="hidden md:block text-sm lg:text-base max-w-80 md:max-w-[600px] lg:max-w-[800px] space-y-2 md:space-y-4 lg:space-y-6  2xl:text-2xl ">
-				{aboutParagraphs.map((about, index) => (
+				{aboutMe.map((about, index) => (
 					<p key={`l-about-${index}`}>{about}</p>
 				))}
 			</div>
@@ -78,9 +72,9 @@ const AboutMeSection = forwardRef<HTMLElement>((__, ref) => {
 						stopOnFocusIn: true,
 						stopOnMouseEnter: true
 					})
-				]}  className="bg-brand-500/50  p-8 rounded-md dark:bg-secondary-900/50 text-white">
+				]}  className="bg-brand-900 p-8 rounded-md dark:bg-secondary-900/50 text-white">
 					<CarouselContent >
-						{aboutParagraphs.map((about, index) => (
+						{aboutMe.map((about, index) => (
 							<CarouselItem key={`about-${index}`}><p>{about}</p></CarouselItem>
 						))}
 					</CarouselContent>
@@ -88,10 +82,12 @@ const AboutMeSection = forwardRef<HTMLElement>((__, ref) => {
 				<PaginationDots pageTotal={numberOfSlides} activePage={current}/>
 			</div>
 
-			<Button className="w-max" onClick={handleDownload}>
-				Download Resume
-				<Download size={16}/>
-			</Button>
+			<div className="w-full flex justify-center md:justify-start">
+				<Button className="w-max" onClick={handleDownload}>
+					Download Resume
+					<Download size={16} />
+				</Button>
+			</div>
 		</section>
 	)
 })

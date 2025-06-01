@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import DarkModeToggle from "@/components/DarkModeToggle";
 import ThemeProvider from "@/components/ThemeProvider";
 import Stepper from "@/components/Stepper";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +37,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <div className="flex flex-col relative max-w-[1222px] mx-auto h-dvh overflow-y-auto ">
+          <div className="flex flex-col relative max-w-[1222px] mx-auto h-dvh overflow-y-auto z-10">
 
             {/* Wrapper for contents */}
             {children}
@@ -46,8 +47,9 @@ export default function RootLayout({
 
             <Navigation />
 
-
           </div>
+          <BackgroundBeams className="bg-backround"/>
+
 
         </ThemeProvider>
 

@@ -1,0 +1,155 @@
+{
+	"home": {
+		"greetings": "Hello, I am",
+		"name": "Irel Kian",
+		"description": "I am a Software Developer based in the Philippines with expertise in building scalable, efficient, and user-friendly web and mobile applications.",
+		"linkedin": "https://www.linkedin.com/in/kianirel/"
+	},
+	"aboutMe": [
+		"I'm a passionate Software Developer with experience building scalable and maintainable web applications. My journey started in 2021 with Python, which laid a strong foundation in logic and problem-solving.",
+		"I specialize in React.js and Tailwind CSS, and I often use UI libraries like DaisyUI, Material UI, SHADCN, and Tailwind UI. My design-to-code process is supported by my Figma proficiency, using components, auto-layouts, and prototyping.",
+		"While front-end is my strength, I've also worked on backend projects using Express, NestJS, Slim PHP, and Spring Boot, along with databases like PostgreSQL, MySQL, MongoDB, and Firebase.",
+		"I'm familiar with Docker, Kubernetes, and Supabase, and I enjoy exploring tools across the full stack to continuously grow as a developer."
+	],
+	"skills": [
+		{
+			"icon": "toybrick",
+			"title": "API Integration",
+			"description": "Implemented API integrations on the front end using Axios, with efficient data fetching and caching handled by TanStack Query."
+		},
+		{
+			"icon": "layoutDashboard",
+			"title": "Front-end Development",
+			"description": "Worked as a Front-End Developer for 2 years, leveraging various libraries and tools within the React ecosystem."
+		},
+		{
+			"icon": "serverCog",
+			"title": "Back-end Development",
+			"description": "Developed and practiced RESTful APIs using Express, NestJS, and Spring Boot, with MySQL and PostgreSQL as database backends."
+		},
+		{
+			"icon": "speech",
+			"title": "Technical Leadership",
+			"description": "Led and guided development teams to successful. Proficient in Agile and Scrum methodologies."
+		},
+		{
+			"icon": "tabletSmartphone",
+			"title": "Mobile Development",
+			"description": "Built mobile apps with React Native (Expo) and integrated Supabase as the backend service."
+		},
+		{
+			"icon": "route",
+			"title": "Google Maps API",
+			"description": "Proficient in using Google Maps API Products like Maps, Routes, and Places"
+		}
+	],
+	"projects": [
+		{
+			"id": 0,
+			"name": "Buildhub PH | E-Commerce",
+			"description": "ReactJS, NodeJS, MYSQL, Google Maps API",
+			"thumbnail": "/websites/buildhub.webp",
+			"link": "https://buildhub.ph",
+			"categories": [
+				"front-end"
+			]
+		},
+		{
+			"id": 1,
+			"name": "Towfactory | Towing Service",
+			"description": "ReactJS, NodeJS, MYSQL, Google Maps API",
+			"thumbnail": "/websites/towfactory.webp",
+			"link": "https://agent.towfactory.com",
+			"categories": [
+				"front-end"
+			]
+		},
+		{
+			"id": 2,
+			"name": "Aircamp | Listing Platform",
+			"description": "ReactJS, TypeScipt, NodeJS, MYSQL, REST, Google MAPS API",
+			"thumbnail": "/websites/aircamp.webp",
+			"link": "https://aircamp.ph",
+			"categories": [
+				"front-end"
+			]
+		},
+		{
+			"id": 3,
+			"name": "Innovex | Social Health Platform",
+			"description": "HTML, CSS, JS, NodeJS, MVC, MYSQL",
+			"thumbnail": "/websites/innovex.webp",
+			"link": "https://healthinnovex.org",
+			"categories": [
+				"front-end",
+				"back-end",
+				"ui/ux"
+			]
+		},
+		{
+			"id": 4,
+			"name": "Laro | Online Service",
+			"description": "ReactJS, NodeJS, MYSQL, Google Maps API",
+			"thumbnail": "/websites/laro.webp",
+			"link": "https://laro.com.ph",
+			"categories": [
+				"front-end"
+			]
+		},
+		{
+			"id": 5,
+			"name": "SK Website | Online Service",
+			"description": "ReactJS, NodeJS, Supabase, PostgresSQL, SHADCN",
+			"thumbnail": "/websites/sk-online.webp",
+			"link": "https://skbrgy177.com/",
+			"categories": [
+				"front-end",
+				"back-end"
+			]
+		},
+		{
+			"id": 6,
+			"name": "JCiN | Research",
+			"description": "React Native, Supabase, PostgresSQL, ShadCN, EXPO",
+			"thumbnail": "/websites/jcin.webp",
+			"link": "https://jci-n-web.vercel.app/",
+			"categories": [
+				"back-end",
+				"front-end",
+				"ui/ux",
+				"mobile"
+			]
+		},
+		{
+			"id": 7,
+			"name": "JCiN Mobile | Mobile App Design",
+			"description": "Figma, UI/UX",
+			"thumbnail": "/websites/figma-splash.webp",
+			"link": "https://www.figma.com/design/It1HzyDsMthua9yKRqNJsX/Thesis-Mobile-App?node-id=0-1&t=1vulM6Bkr7NyebKe-1",
+			"categories": [
+				"ui/ux"
+			]
+		},
+		{
+			"id": 8,
+			"name": "Presentation+ | Web Prototype Design",
+			"description": "Figma, UI/UX",
+			"thumbnail": "/websites/figma-splash.webp",
+			"link": "https://www.figma.com/design/mDBmTCU1IxWoVxyU6SCnMl/Presentation--?node-id=0-1&t=9qTvns882MfN09QX-1",
+			"categories": [
+				"ui/ux"
+			]
+		},
+		{
+			"id": 9,
+			"name": "Web Portfolio | Web Design",
+			"description": "Figma, UI/UX",
+			"thumbnail": "/websites/figma-splash.webp",
+			"link": "https://www.figma.com/design/LwUAV6AUGsejjSf6OfJeBZ/Web-Portfolio-2?node-id=0-1&t=U5zLyt68geMOPe8M-1",
+			"categories": [
+				"ui/ux"
+			]
+		}
+		
+	]
+}
