@@ -26,50 +26,52 @@ export const HoverEffect = ({
         className
       )}
     >
-      {items.map((item, idx) => (
-        <a
-          href={item?.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          key={`prj-web-${item?.id}`}
-          className="relative group  block p-2 h-full w-full"
-          onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <AnimatePresence>
-            {hoveredIndex === idx && (
-              <motion.span
-                className="absolute inset-0 h-full w-full bg-secondary-200/[0.5] dark:bg-secondary-900/[0.8] block  rounded-3xl"
-                layoutId="hoverBackground"
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.15 },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }}
-              />
-            )}
-          </AnimatePresence>
-          <Card >
-            {item.thumbnail && (
-              <div className="relative w-full h-32 overflow-hidden rounded-sm">
-                <Image
-                  src={item.thumbnail}
-                  alt="web"
-                  fill
-                  loading="lazy"
-                  className="object-cover"
+      <AnimatePresence>
+        {items.map((item, idx) => (
+          <motion.a
+            key={`prj-web-${item?.id}`}
+            href={item?.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative group block p-2 h-full w-full"
+            onMouseEnter={() => setHoveredIndex(idx)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            layout
+          >
+            <AnimatePresence>
+              {hoveredIndex === idx && (
+                <motion.span
+                  className="absolute inset-0 h-full w-full bg-secondary-200/[0.5] dark:bg-secondary-900/[0.8] block rounded-3xl"
+                  layoutId="hoverBackground"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, transition: { duration: 0.15 } }}
+                  exit={{ opacity: 0, transition: { duration: 0.15, delay: 0.2 } }}
                 />
-              </div>
-            )}
-            <CardTitle className="text-base">{item.name}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
-          </Card>
-        </a>
-      ))}
+              )}
+            </AnimatePresence>
+            <Card>
+              {item.thumbnail && (
+                <div className="relative w-full h-32 overflow-hidden rounded-sm">
+                  <Image
+                    src={item.thumbnail}
+                    alt="web"
+                    fill
+                    loading="lazy"
+                    className="object-cover"
+                  />
+                </div>
+              )}
+              <CardTitle className="text-base">{item.name}</CardTitle>
+              <CardDescription>{item.description}</CardDescription>
+            </Card>
+          </motion.a>
+        ))}
+      </AnimatePresence>
+
     </div>
   );
 };

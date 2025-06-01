@@ -36,6 +36,9 @@ export default function ProjectsSection() {
 
 	const [renderedProjects, setRenderedProjects] = useState<Project[]>(data.projects)
 
+	const [visibleProjects, setVisibleProjects] = useState<number>(6)
+
+
 	const handleClickFilter = (value: string) => {
 		setActive(value)
 
@@ -49,6 +52,15 @@ export default function ProjectsSection() {
 		setRenderedProjects(filteredProjects)
 	}
 
+	const handleViewMore = () => {
+		if(visibleProjects >= data.projects.length){
+			setVisibleProjects(6)
+			return
+		}
+
+		setVisibleProjects(curr => curr + 3)
+	}
+
 
 	return (
 		<section id="projects" className="h-full  p-8 md:pl-12 lg:pl-20 relative flex flex-col gap-8 lg:gap-12  " data-section>
@@ -58,15 +70,16 @@ export default function ProjectsSection() {
 				<p className="mt-2 text-xl md:text-2xl lg:text-3xl font-bold"><span className="text-brand-500">Works</span> I&apos;ve been Part of</p>
 			</div>
 			{/* Mobile Card Stack */}
-			<div className="flex-1 flex justify-center  items-center md:hidden">
-				<CardStack items={renderedProjects.slice(0,3)} offset={4} />
+			<div className="flex-1 flex justify-evenly items-center md:hidden flex-col">
+				<CardStack items={renderedProjects.slice(0,4)} offset={4} />
+				{renderedProjects.length > 6 && <Button variant="outline">Show All</Button>}
 			</div>
 			{/* Web View */}
 			<div className="hidden md:flex flex-col max-w-[600px] lg:max-w-[900px]  gap-6 items-center">
 				<Filter filterLabels={filterLabels} active={active} handleClick={handleClickFilter}/>
 				
-				{renderedProjects.length === 0 ? <EmptyResult/> : <HoverEffect items={renderedProjects.slice(0, 6)}/>}
-				{renderedProjects.length > 6 && <Button variant="outline">View More</Button>}
+				{renderedProjects.length === 0 ? <EmptyResult/> : <HoverEffect items={renderedProjects.slice(0, visibleProjects)}/>}
+				{renderedProjects.length > 6 && <Button variant="outline" onClick={handleViewMore}>{visibleProjects >= data.projects.length ? "See Less" : "See More"}</Button>}
 			</div>
 		</section>
 	)

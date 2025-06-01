@@ -47,7 +47,7 @@
 		{
 			"id": 0,
 			"name": "Buildhub PH | E-Commerce",
-			"description": "ReactJS, NodeJS, MYSQL",
+			"description": "ReactJS, NodeJS, MYSQL, Google Maps API",
 			"thumbnail": "/websites/buildhub.webp",
 			"link": "https://buildhub.ph",
 			"categories": [
@@ -71,8 +71,7 @@
 			"thumbnail": "/websites/aircamp.webp",
 			"link": "https://aircamp.ph",
 			"categories": [
-				"front-end",
-				"ui/ux"
+				"front-end"
 			]
 		},
 		{
@@ -120,6 +119,37 @@
 				"ui/ux",
 				"mobile"
 			]
+		},
+		{
+			"id": 7,
+			"name": "JCiN Mobile | Mobile App Design",
+			"description": "Figma, UI/UX",
+			"thumbnail": "/websites/figma-splash.webp",
+			"link": "https://www.figma.com/design/It1HzyDsMthua9yKRqNJsX/Thesis-Mobile-App?node-id=0-1&t=1vulM6Bkr7NyebKe-1",
+			"categories": [
+				"ui/ux"
+			]
+		},
+		{
+			"id": 8,
+			"name": "Presentation+ | Web Prototype Design",
+			"description": "Figma, UI/UX",
+			"thumbnail": "/websites/figma-splash.webp",
+			"link": "https://www.figma.com/design/mDBmTCU1IxWoVxyU6SCnMl/Presentation--?node-id=0-1&t=9qTvns882MfN09QX-1",
+			"categories": [
+				"ui/ux"
+			]
+		},
+		{
+			"id": 9,
+			"name": "Web Portfolio | Web Design",
+			"description": "Figma, UI/UX",
+			"thumbnail": "/websites/figma-splash.webp",
+			"link": "https://www.figma.com/design/LwUAV6AUGsejjSf6OfJeBZ/Web-Portfolio-2?node-id=0-1&t=U5zLyt68geMOPe8M-1",
+			"categories": [
+				"ui/ux"
+			]
 		}
+		
 	]
 }
