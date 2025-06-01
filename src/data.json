@@ -48,7 +48,7 @@
 			"id": 0,
 			"name": "Buildhub PH | E-Commerce",
 			"description": "ReactJS, NodeJS, MYSQL",
-			"thumbnail": "/websites/buildhub.jpg",
+			"thumbnail": "/websites/buildhub.webp",
 			"link": "https://buildhub.ph",
 			"categories": [
 				"Full-stack",
@@ -60,7 +60,7 @@
 			"id": 1,
 			"name": "Towfactory | Towing Service",
 			"description": "ReactJS, NodeJS, MYSQL, Google Maps API",
-			"thumbnail": "/websites/towfactory.jpg",
+			"thumbnail": "/websites/towfactory.webp",
 			"link": "https://agent.towfactory.com",
 			"categories": [
 				"Full-stack",
@@ -72,7 +72,7 @@
 			"id": 2,
 			"name": "Aircamp | Listing Platform",
 			"description": "ReactJS, TypeScipt, NodeJS, MYSQL, REST, Google MAPS API",
-			"thumbnail": "/websites/aircamp.jpg",
+			"thumbnail": "/websites/aircamp.webp",
 			"link": "https://aircamp.ph",
 			"categories": [
 				"Full-stack",
@@ -85,7 +85,7 @@
 			"id": 3,
 			"name": "Innovex | Social Health Platform",
 			"description": "HTML, CSS, JS, NodeJS, MVC, MYSQL",
-			"thumbnail": "/websites/innovex.jpg",
+			"thumbnail": "/websites/innovex.webp",
 			"link": "https://healthinnovex.org",
 			"categories": [
 				"Front-end",
@@ -97,7 +97,7 @@
 			"id": 4,
 			"name": "Laro | Online Service",
 			"description": "ReactJS, NodeJS, MYSQL, Google Maps API",
-			"thumbnail": "/websites/laro.jpg",
+			"thumbnail": "/websites/laro.webp",
 			"link": "https://laro.com.ph",
 			"categories": [
 				"Full-stack",
@@ -109,7 +109,7 @@
 			"id": 5,
 			"name": "SK Website | Online Service",
 			"description": "ReactJS, NodeJS, Supabase, MYSQL, SHADCN",
-			"thumbnail": "/websites/sk-online.jfif",
+			"thumbnail": "/websites/sk-online.webp",
 			"link": "https://skbrgy177.com/",
 			"categories": [
 				"Full-stack",
