@@ -49,42 +49,74 @@
 			"name": "Buildhub PH | E-Commerce",
 			"description": "ReactJS, NodeJS, MYSQL",
 			"thumbnail": "/websites/buildhub.jpg",
-			"link": "https://buildhub.ph"
+			"link": "https://buildhub.ph",
+			"categories": [
+				"Full-stack",
+				"Front-end",
+				"Back-end"
+			]
 		},
 		{
 			"id": 1,
 			"name": "Towfactory | Towing Service",
 			"description": "ReactJS, NodeJS, MYSQL, Google Maps API",
 			"thumbnail": "/websites/towfactory.jpg",
-			"link": "https://agent.towking.ph"
+			"link": "https://agent.towfactory.com",
+			"categories": [
+				"Full-stack",
+				"Front-end",
+				"Back-end"
+			]
 		},
 		{
 			"id": 2,
 			"name": "Aircamp | Listing Platform",
 			"description": "ReactJS, TypeScipt, NodeJS, MYSQL, REST, Google MAPS API",
 			"thumbnail": "/websites/aircamp.jpg",
-			"link": "https://aircamp.ph"
+			"link": "https://aircamp.ph",
+			"categories": [
+				"Full-stack",
+				"Front-end",
+				"Back-end",
+				"UI/UX"
+			]
 		},
 		{
 			"id": 3,
 			"name": "Innovex | Social Health Platform",
 			"description": "HTML, CSS, JS, NodeJS, MVC, MYSQL",
 			"thumbnail": "/websites/innovex.jpg",
-			"link": "https://health.innovex.org"
+			"link": "https://healthinnovex.org",
+			"categories": [
+				"Front-end",
+				"Back-end",
+				"UI/UX"
+			]
 		},
 		{
 			"id": 4,
 			"name": "Laro | Online Service",
 			"description": "ReactJS, NodeJS, MYSQL, Google Maps API",
 			"thumbnail": "/websites/laro.jpg",
-			"link": "https://laro.com.ph"
+			"link": "https://laro.com.ph",
+			"categories": [
+				"Full-stack",
+				"Front-end",
+				"Back-end"
+			]
 		},
 		{
 			"id": 5,
 			"name": "SK Website | Online Service",
 			"description": "ReactJS, NodeJS, Supabase, MYSQL, SHADCN",
 			"thumbnail": "/websites/sk-online.jfif",
-			"link": "https://skbrgy177.com/"
+			"link": "https://skbrgy177.com/",
+			"categories": [
+				"Full-stack",
+				"Front-end",
+				"Back-end",
+				"UI/UX"
+			]
 		}
 	]
 }
