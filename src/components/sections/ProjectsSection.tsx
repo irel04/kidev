@@ -99,7 +99,7 @@ export default function ProjectsSection() {
         </DialogContent>
 			</Dialog>
 			{/* Web View */}
-			<div className="hidden md:flex flex-col max-w-[600px] lg:max-w-[900px]  gap-6 items-center">
+			<div className="hidden md:flex flex-col max-w-[600px] lg:max-w-[800px] xl:max-w-[1000px] gap-6 items-center">
 				<Filter filterLabels={filterLabels} active={active} handleClick={handleClickFilter}/>
 				
 				{renderedProjects.length === 0 ? <EmptyResult/> : <HoverEffect items={renderedProjects.slice(0, visibleProjects)}/>}
