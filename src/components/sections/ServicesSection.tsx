@@ -91,7 +91,7 @@ const ServicesSection = forwardRef<HTMLElement>((__, ref) => {
 
 			</div>
 
-			<div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 max-w-[600px] lg:max-w-[900px]">
+			<div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 max-w-[600px] lg:max-w-[800px] xl:max-w-[1000px]">
 				{data.skills.map((skill, index) =>
 					<SkillsCard icon={definedIcons[skill.icon]} description={skill.description} title={skill.title} key={`grid-icons-${index}`}/>
 				)}
