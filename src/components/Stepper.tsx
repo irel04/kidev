@@ -12,7 +12,7 @@ export default function Stepper() {
 
 	return (
 
-		<div className="hidden fixed right-2 md:right-8 lg:right-20 xl:right-30 2xl:right-100 top-1/4 md:flex flex-col h-96 2xl:h-[600px] px-2 justify-between">
+		<div className="hidden md:fixed right-8 lg:right-20 xl:right-30  top-1/2 -translate-y-1/2 md:flex flex-col h-[50vh] px-2 justify-between">
 			<div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-px bg-secondary-500"></div>
 			
 			{sections.map((section, index) => (
